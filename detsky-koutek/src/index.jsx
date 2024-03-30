@@ -44,7 +44,7 @@ const router = createBrowserRouter([
         element: <CentersPage />,
         children: [
           {
-            path: '/pobocky/:centerId',
+            path: ':centerId',
             element: <CenterDetail />,
           },
         ],

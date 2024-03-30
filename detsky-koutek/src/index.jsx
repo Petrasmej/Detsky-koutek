@@ -7,6 +7,7 @@ import { Contact } from './pages/Contact/Contact';
 import { About } from './pages/About/About';
 import { Outlet } from 'react-router-dom';
 import { CentersPage } from './pages/CentersPage/CentersPage';
+import { CenterDetail } from './components/centerDetail/CenterDetail';
 
 const App = () => {
   return (
@@ -41,6 +42,12 @@ const router = createBrowserRouter([
       {
         path: '/Pobocky',
         element: <CentersPage />,
+        children: [
+          {
+            path: '/pobocky/:centerId',
+            element: <CenterDetail />,
+          },
+        ],
       },
     ],
   },
